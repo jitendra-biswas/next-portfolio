@@ -1,5 +1,9 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
 import ProjectCard from "@/app/Components/ProjectCard";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const Project = (props) => {
   const projectData = [
@@ -29,10 +33,40 @@ const Project = (props) => {
     },
     
   ]
+
+  {/* GSAP Animation */}
+  const headRef = useRef(null)
+  const projectRef = useRef(null)
+
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(()=>{
+    gsap.from(headRef.current,{
+      opacity:0,
+      y:100,
+      delay:0.1,
+      scrollTrigger:{
+        trigger:headRef.current,
+        scroller:"body",
+        start:"top 80%"
+      }
+    })
+    gsap.from(projectRef.current,{
+      opacity:0,
+      y:100,
+      delay:0.1,
+      stagger:0.2,
+      scrollTrigger:{
+        trigger:headRef.current,
+        scroller:"body",
+        start:"top 80%"
+      }
+    })
+  })
   return (
+
     <>
-    <h1 className="heading w-fit text-3xl font-semibold">Featured Projects</h1>
-      <div className="w-full h-fit flex flex-wrap gap-3 mt-5 pb-20">
+    <h1 ref={headRef} className="heading w-fit text-3xl font-semibold">Featured Projects</h1>
+      <div ref={projectRef} className="w-full h-fit flex flex-wrap gap-3 mt-5 pb-20">
         {projectData.map((project,idx)=>{
           return (
             <ProjectCard key={idx} img={project.img} title={project.title} desc={project.desc} github={project.github} link={project.link} tech={project.tech}/>

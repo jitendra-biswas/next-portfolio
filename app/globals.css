@@ -25,6 +25,28 @@
     border-bottom: 2px solid rgb(184, 183, 183);
 }
 
+.react{
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.cursor{
+    background-color: white;
+    mix-blend-mode: difference;
+}
+
 
 @theme inline {
     --font-heading: var(--font-sans);

@@ -1,5 +1,9 @@
+"use client"
+
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef } from 'react'
 import { CiMail } from 'react-icons/ci'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { PiReadCvLogo } from 'react-icons/pi'
@@ -37,16 +41,26 @@ const page = () => {
         }
     ]
 
+    const cardRef = useRef(null);
+
+    useGSAP(() => {
+  gsap.from(cardRef.current, {
+    opacity: 0,
+    y: 80,
+   delay:0.2
+  });
+});
+
   return (
    <>
-    <div className='pt-20 h-[90vh]'>
+    <div ref={cardRef} className='pt-20 h-[90vh]'>
         <h1 className='heading text-3xl font-semibold mb-10'>Get In Touch</h1>
 
        <div className='flex flex-wrap gap-5 px-3'>
          {contactDetail.map((contact,idx:number)=>{
             return (
 
-                <Link key={idx} href={contact.link} target='_blank' className="w-fit card flex items-center gap-3 bg-popover border-2 dark:border-[#1f1f1f] p-2 rounded-xl hover:scale-110 transition-all">
+                <Link  key={idx} href={contact.link} target='_blank' className=" w-fit card flex items-center gap-3 bg-popover border-2 dark:border-[#1f1f1f] p-2 rounded-xl hover:scale-110 transition-all">
             <div className="left">{contact.icon}</div>
             <div className="right">
                 <p className='text-sm text-zinc-400'>{contact.icon_name}</p>

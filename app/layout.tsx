@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/app/Components/Nav";
 import Footer from "@/app/Components/Footer";
 import { ThemeProvider } from "@/app/Components/theme-provider";
+import CustomCursor from "@/app/Components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         defaultTheme="dark"
         disableTransitionOnChange
         >
+          <CustomCursor />
           <Nav />
         {children}
         <Footer />
