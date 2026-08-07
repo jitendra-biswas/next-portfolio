@@ -42,11 +42,11 @@ const page = () => {
     <div className='pt-20 h-[90vh]'>
         <h1 className='heading text-3xl font-semibold mb-10'>Get In Touch</h1>
 
-       <div className='flex flex-wrap gap-5'>
+       <div className='flex flex-wrap gap-5 px-3'>
          {contactDetail.map((contact,idx:number)=>{
             return (
 
-                <Link key={idx} href={contact.link} target='_blank' className="w-fit card flex items-center gap-3 bg-popover border-2 dark:border-[#1f1f1f] p-5 rounded-xl hover:scale-110 transition-all">
+                <Link key={idx} href={contact.link} target='_blank' className="w-fit card flex items-center gap-3 bg-popover border-2 dark:border-[#1f1f1f] p-2 rounded-xl hover:scale-110 transition-all">
             <div className="left">{contact.icon}</div>
             <div className="right">
                 <p className='text-sm text-zinc-400'>{contact.icon_name}</p>
