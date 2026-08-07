@@ -15,7 +15,7 @@ const Nav = () => {
     },
   ]
   return (
-   <div className="w-[35vw] lg:w-[45vw] max-lg:w-[60vw] max-md:w-[80vw] fixed z-99">
+   <div className="w-full px-[30vw] lg:px-[25vw] max-lg:px-[20vw] max-md:px-[5vw] fixed top-0 left-0 z-99">
      <nav className="w-full h-16 flex items-center justify-between dark:bg-black/50 backdrop-blur-sm ">
       
 

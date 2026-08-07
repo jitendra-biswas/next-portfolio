@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { PiReadCvLogo } from "react-icons/pi";
 const Home = () => {
   return (
-   <div className="w-full flex flex-col gap-7 pt-20 pb-22">
+   <div className="w-full flex flex-col gap-7 pt-20 pb-32">
         <div className="info">
           <div className="left">
             <div className="relative profile-picture w-26 h-26  rounded-full overflow-hidden bg-[var(--profile)]">
