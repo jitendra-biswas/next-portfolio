@@ -36,7 +36,7 @@ const page = () => {
             icon:<PiReadCvLogo  className='text-5xl dark:bg-zinc-900 p-1 rounded' />,
             icon_name:"Resume/CV",
             contact_name:"View Resume",
-            link:"https://drive.google.com/file/d/1PwkjigeUaeIH6mtKs9dBz3HNMs1zPf-k/view?usp=drive_link",
+            link:"https://drive.google.com/file/d/1mxrVOzMPQ9vmWOLgt0RFtI1pRu6vcHps/view?usp=drive_link",
 
         }
     ]
