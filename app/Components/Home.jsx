@@ -47,7 +47,7 @@ const Home = () => {
    <div className="w-full flex flex-col gap-7 pt-20 pb-32">
         <div className="info">
           <div ref={leftRef} className="left">
-            <div className="relative profile-picture w-26 h-26  rounded-full overflow-hidden bg-[var(--profile)]">
+            <div className="relative profile-picture w-26 h-26  rounded-full overflow-hidden bg-(--profile)">
               <Image
                 src="/images/profile.png"
                 alt=""
@@ -58,7 +58,7 @@ const Home = () => {
             </div>
           </div>
           <div ref={rightRef} className="right">
-            <h1 className="font-bold text-md mt-3 dark:text-zinc-100 light:text-zinc-800"><span className="text-md">Hello, I'm,</span> <br /> <span className="text-4xl">Jitendra Biswas</span> <br /> A Full Stack <span className="text-[var(--profile-text)]">Web Developer</span> </h1>
+            <h1 className="font-bold text-md mt-3 dark:text-zinc-100 light:text-zinc-800"><span className="text-md">Hello, I'm,</span> <br /> <span className="text-4xl">Jitendra Biswas</span> <br /> A Full Stack <span className="text-(--profile-text)">Web Developer</span> </h1>
             <p className="text-sm text-zinc-500">
               Intern at -{" "}
               <span className="text-xs font-semibold">Going Genius</span>
@@ -125,7 +125,7 @@ const Home = () => {
         </p>
 
         <div ref={btnRef} className="buttons flex gap-2">
-          <Link href="https://drive.google.com/file/d/1mxrVOzMPQ9vmWOLgt0RFtI1pRu6vcHps/view?usp=drive_link" target="_blank" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer dark:text-zinc-100 light:text-zinc-800 hover:scale-105 transition-all"><PiReadCvLogo /> Resume/CV</Link>
+          <Link href="https://drive.google.com/file/d/1mxrVOzMPQ9vmWOLgt0RFtI1pRu6vcHps/view?usp=sharing" target="_blank" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer dark:text-zinc-100 light:text-zinc-800 hover:scale-105 transition-all"><PiReadCvLogo /> Resume/CV</Link>
           <Link href="/contact" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer text-black bg-zinc-100 hover:scale-105 transition-all"><BsSend /> Get in touch</Link>
         </div>
 
