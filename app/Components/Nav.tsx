@@ -16,7 +16,7 @@ const Nav = () => {
   ]
   return (
    <div className="w-full px-[30vw] lg:px-[25vw] max-lg:px-[20vw] max-md:px-[5vw] fixed top-0 left-0 z-99">
-     <nav className="w-full h-16 flex items-center justify-between dark:bg-black/50 backdrop-blur-sm ">
+     <nav className="w-full h-16 flex items-center justify-between dark:bg-black/50 backdrop-blur-sm bg-white/0">
       
 
       <div className="links flex items-center gap-5 tracking-wide">
