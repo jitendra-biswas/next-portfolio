@@ -130,7 +130,7 @@ const Home = () => {
           <Link href="/contact" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer text-black bg-zinc-100 hover:scale-105 transition-all"><BsSend /> Get in touch</Link>
         </div>
 
-        <div ref={socialRef} className="social-media flex gap-3 mt-5">
+        <div ref={socialRef} className="social-media flex gap-3 mt-2">
           <Link href="https://github.com/jitendra-biswas" target="_blank" className="github dark:text-zinc-200 text-xl w-6 h-6 cursor-pointer hover:scale-120 transition-all"><FaGithub className="w-full h-full" /></Link>
           <Link href="https://www.linkedin.com/in/jitendra-biswas-603206361/" target="_blank" className="linkedin dark:text-zinc-200 text-xl w-6 h-6 cursor-pointer hover:scale-120 transition-all"><FaLinkedinIn className="w-full h-full" /></Link>
           <Link href="mailto:jitendrabiswas12344@gmail.com" target="_blank" className="gmail dark:text-zinc-200 text-xl w-7 h-7 cursor-pointer hover:scale-120 transition-all"><CgMail className="w-full h-full" /></Link>
