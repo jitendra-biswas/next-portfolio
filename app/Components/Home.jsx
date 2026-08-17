@@ -6,7 +6,6 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { BsSend } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
-import { CiLocationOn } from "react-icons/ci";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { PiReadCvLogo } from "react-icons/pi";
 const Home = () => {
@@ -124,10 +123,7 @@ const Home = () => {
           </span>{" "}
           for creating smooth motion and animations.
         </p>
-
-        <div className="location flex items-center gap-2 text-sm">
-          <CiLocationOn />Jatibuti, Kathmandu, Nepal
-        </div>
+        
 
         <div ref={btnRef} className="buttons flex gap-2">
           <Link href="https://drive.google.com/file/d/1mxrVOzMPQ9vmWOLgt0RFtI1pRu6vcHps/view?usp=sharing" target="_blank" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer dark:text-zinc-100 light:text-zinc-800 hover:scale-105 transition-all"><PiReadCvLogo /> Resume/CV</Link>
