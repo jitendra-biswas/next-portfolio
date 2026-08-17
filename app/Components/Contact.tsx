@@ -2,6 +2,7 @@
 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 import Link from 'next/link'
 import React, { useRef } from 'react'
 import { CiMail } from 'react-icons/ci'
@@ -43,17 +44,24 @@ const page = () => {
 
     const cardRef = useRef(null);
 
+    gsap.registerPlugin(ScrollTrigger)
+
     useGSAP(() => {
   gsap.from(cardRef.current, {
     opacity: 0,
     y: 80,
-   delay:0.2
+   delay:0.2,
+   scrollTrigger:{
+        trigger:cardRef.current,
+        scroller:"body",
+        start:"top 80%"
+      }
   });
 });
 
   return (
    <>
-    <div ref={cardRef} className='pt-20 h-[90vh]'>
+    <div id="contact" ref={cardRef} className='py-20 h-fit'>
         <h1 className='heading text-3xl font-semibold mb-10'>Get In Touch</h1>
 
        <div className='flex flex-wrap gap-5 px-3'>

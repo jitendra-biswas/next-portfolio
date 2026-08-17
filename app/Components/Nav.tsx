@@ -10,13 +10,14 @@ const Nav = () => {
       linkName:"Home"
     },
     {
-      id:"contact",
-      linkName:"Contact"
-    },
-    {
       id:"#project",
       linkName:"Projects"
     },
+    {
+      id:"#contact",
+      linkName:"Contact"
+    },
+    
 
   ]
   return (
