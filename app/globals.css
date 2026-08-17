@@ -6,6 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 *{
     font-family: "Hanken Grotesk", sans-serif;
+    scroll-behavior: smooth;
 }
 
 .heading{
@@ -93,7 +94,7 @@
 :root {
     --profile-text:#555fee;
     --profile:#83bbff;
-    --background: oklch(1 0 0);
+    --background: #F3F4F6;
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);

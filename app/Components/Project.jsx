@@ -65,7 +65,7 @@ const Project = (props) => {
   return (
 
     <>
-    <h1 ref={headRef} className="heading w-fit text-3xl font-semibold">Featured Projects</h1>
+    <h1 id="project" ref={headRef} className="heading w-fit text-3xl font-semibold">Featured Projects</h1>
       <div ref={projectRef} className="w-full h-fit flex flex-wrap gap-3 mt-5 pb-20">
         {projectData.map((project,idx)=>{
           return (
