@@ -127,7 +127,7 @@ const Home = () => {
 
         <div ref={btnRef} className="buttons flex gap-2">
           <Link href="https://drive.google.com/file/d/1mxrVOzMPQ9vmWOLgt0RFtI1pRu6vcHps/view?usp=sharing" target="_blank" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer dark:text-zinc-100 light:text-zinc-800 hover:scale-105 transition-all"><PiReadCvLogo /> Resume/CV</Link>
-          <Link href="/contact" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer text-black bg-zinc-100 hover:scale-105 transition-all"><BsSend /> Get in touch</Link>
+          <Link href="#contact" className="border-2 border-zinc-300 text-sm px-3 py-1 rounded-md flex items-center gap-1 cursor-pointer text-black bg-zinc-100 hover:scale-105 transition-all"><BsSend /> Get in touch</Link>
         </div>
 
         <div ref={socialRef} className="social-media flex gap-3 mt-2">
