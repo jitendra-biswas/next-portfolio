@@ -58,12 +58,15 @@ const About = () => {
               <h1 className='text-sm font-semibold mt-4 text-zinc-400'>Skills</h1>
               <div className="techs flex flex-wrap items-center gap-2">
                 <Image src="/images/javascript.png" width={20} height={20} alt='javascript'/>
+                <Image src="/images/ts.png" width={22} height={22} alt='typescript'/>
                 <Image src="/images/reactjs.png" width={20} height={20} alt='reactjs' className='react'/>
                 <Image src="/images/nodejs.png" width={20} height={20} alt='nodejs'/>
                 <Image src="/images/nextjs.png" width={20} height={20} alt='nextjs'/>
                 <Image src="/images/tailwindcss.png" width={20} height={20} alt='tailwindcss'/>
                 <Image src="/images/mongodb.png" width={20} height={20} alt='mongodb'/>
+                <Image src="/images/supabase.png" width={20} height={20} alt='supabase'/>
                 <img src="/images/gsap.png" className='h-3' alt='gsap'/>
+                <Image src="/images/framer.png" width={20} height={20} alt='supabase'/>
               </div>
             </div>
         </div>
