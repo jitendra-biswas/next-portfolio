@@ -60,6 +60,15 @@ const Technologies = () => {
           </div>
           <div className="technology w-fit mt-2 border-2 border-chart text-sm px-3 py-1 rounded-md flex items-center gap-1  dark:text-zinc-100 bg-popover border-dotted ">
             <Image
+              src="/images/ts.png"
+              width={20}
+              height={20}
+              alt="typescript"
+            />{" "}
+            TypeScript
+          </div>
+          <div className="technology w-fit mt-2 border-2 border-chart text-sm px-3 py-1 rounded-md flex items-center gap-1  dark:text-zinc-100 bg-popover border-dotted ">
+            <Image
               src="/images/reactjs.png"
               width={20}
               height={20}
@@ -96,6 +105,15 @@ const Technologies = () => {
             />{" "}
             MongoDB
           </div>
+          <div className="technology w-fit mt-2 border-2 border-chart text-sm px-3 py-1 rounded-md flex items-center gap-1  dark:text-zinc-100 bg-popover border-dotted ">
+            <Image
+              src="/images/supabase.png"
+              width={20}
+              height={20}
+              alt="supabase"
+            />{" "}
+            Supabase
+          </div>
            <div className="technology w-fit mt-2 border-2 border-chart text-sm px-3 py-1 rounded-md flex items-center gap-1  dark:text-zinc-100 bg-popover border-dotted ">
             <Image
               src="/images/tailwindcss.png"
@@ -113,6 +131,15 @@ const Technologies = () => {
               alt="GSAP"
             />{" "}
             
+          </div>
+          <div className="technology w-fit mt-2 border-2 border-chart text-sm px-3 py-1 rounded-md flex items-center gap-1  dark:text-zinc-100 bg-popover border-dotted ">
+            <img
+              src="/images/framer.png"
+              width={20}
+              height={20}
+              alt="framer motion"
+            />{" "}
+            Framer Motion
           </div>
           <div className="technology w-fit mt-2 border-2 border-chart text-sm px-3 py-1 rounded-md flex items-center gap-1  dark:text-zinc-100 bg-popover border-dotted ">
             <FaGithub className="text-xl"/> GitHub
