@@ -74,6 +74,11 @@ const Home = () => {
           </span>
           ,{" "}
           <span className="inline-flex text-sm items-center gap-1 px-2 py-1 rounded bg-popover dark:text-zinc-100 light:text-zinc-800 border-2 border-chart border-dotted font-medium align-middle">
+            <Image src="/images/ts.png" width={20} height={20} alt="ts" />
+            TypeScript
+          </span>
+          ,{" "}
+          <span className="inline-flex text-sm items-center gap-1 px-2 py-1 rounded bg-popover dark:text-zinc-100 light:text-zinc-800 border-2 border-chart border-dotted font-medium align-middle">
             <Image src="/images/reactjs.png" width={20} height={20} alt="react" className="react"/>
             React
           </span>
@@ -98,6 +103,17 @@ const Home = () => {
             />{" "}
             MongoDB
           </span>
+          ,{" "}
+          <span className="inline-flex text-sm items-center gap-1 px-2 py-1 rounded bg-popover dark:text-zinc-100 light:text-zinc-800 border-2 border-chart border-dotted font-medium align-middle">
+            <Image
+              src="/images/supabase.png"
+              width={20}
+              height={20}
+              unoptimized
+              alt="supabase"
+            />{" "}
+            Supabase
+          </span>
           , and{" "}
           <span className="inline-flex text-sm items-center gap-1 px-2 py-1 rounded bg-popover dark:text-zinc-100 light:text-zinc-800 border-2 border-chart border-dotted font-medium align-middle">
             <Image
@@ -120,6 +136,17 @@ const Home = () => {
               height={24}
               alt="gsap"
             />
+          </span>{" "}
+          and
+          {" "}
+          <span className="inline-flex text-sm items-center gap-1 px-2 py-1 rounded dark:bg-[#242424] dark:text-zinc-100 light:text-zinc-800 border-2 border-chart border-dotted font-medium align-middle">
+            <img
+              src="/images/framer.png"
+              width={20}
+              height={20}
+              alt="framer"
+            />
+            Framer Motion
           </span>{" "}
           for creating smooth motion and animations.
         </p>
