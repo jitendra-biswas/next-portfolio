@@ -3,12 +3,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { BsSend } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { PiReadCvLogo } from "react-icons/pi";
+import { AnimatePresence, motion } from "motion/react";
 const Home = () => {
+  const [ActiveProfile, setActiveProfile] = useState(false);
   const leftRef = useRef("");
   const rightRef = useRef("");
   const paraRef = useRef("");
@@ -46,8 +48,36 @@ const Home = () => {
   return (
    <div className="w-full flex flex-col gap-7 pt-20 pb-32">
         <div className="info">
-          <div ref={leftRef} className="left">
-            <div className="relative profile-picture w-26 h-26  rounded-full overflow-hidden bg-(--profile)">
+        
+<motion.div
+  layoutId="profile"
+  layout="position"
+  onClick={() => setActiveProfile(!ActiveProfile)}
+  ref={leftRef}
+  className="w-fit left relative group cursor-pointer"
+>
+  <div className="relative profile-picture w-26 h-26 rounded-full overflow-hidden bg-(--profile)">
+    <Image
+      src="/images/profile.png"
+      alt="Profile"
+      className="object-cover object-top scale-140 hover:scale-150 transition-all"
+      fill
+      sizes="140px"
+    />
+  </div>
+
+  <p className="absolute w-42 top-0 left-26 border px-3 py-1 rounded-full text-sm
+                opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                pointer-events-none">
+    Click To View Profile
+  </p>
+</motion.div>
+
+
+         <AnimatePresence>
+           {ActiveProfile && (
+            <div  onClick={()=>setActiveProfile(!ActiveProfile)} className="img-container w-full h-screen flex items-center justify-center fixed top-0 left-0 z-99 bg-zinc-800/50 backdrop-blur-xs">
+            <motion.div layoutId="profile" layout="position" onClick={(e)=>e.stopPropagation()} className="relative profile-picture w-42 h-42  rounded-full overflow-hidden bg-(--profile)">
               <Image
                 src="/images/profile.png"
                 alt=""
@@ -55,8 +85,10 @@ const Home = () => {
                 fill
                 sizes="140px"
               />
-            </div>
+            </motion.div>
           </div>
+          )}
+         </AnimatePresence>
           <div ref={rightRef} className="right">
             <h1 className="font-bold text-md mt-3 dark:text-zinc-100 light:text-zinc-800"><span className="text-md">Hello, I'm,</span> <br /> <span className="text-4xl">Jitendra Biswas</span> <br /> A Full Stack <span className="text-(--profile-text)">Web Developer</span> </h1>
             <p className="text-sm text-zinc-500">

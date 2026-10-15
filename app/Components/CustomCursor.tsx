@@ -7,14 +7,17 @@ export default function CustomCursor() {
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-      }
+      if (!cursorRef.current) return;
+
+      cursorRef.current.style.left = `${e.clientX}px`;
+      cursorRef.current.style.top = `${e.clientY}px`;
     };
 
     window.addEventListener("mousemove", move);
 
-    return () => window.removeEventListener("mousemove", move);
+    return () => {
+      window.removeEventListener("mousemove", move);
+    };
   }, []);
 
   return (
