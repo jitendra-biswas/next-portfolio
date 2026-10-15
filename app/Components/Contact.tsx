@@ -8,6 +8,7 @@ import React, { useRef } from 'react'
 import { CiMail } from 'react-icons/ci'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { PiReadCvLogo } from 'react-icons/pi'
+import { motion } from 'motion/react'
 
 const page = () => {
 
@@ -68,13 +69,15 @@ const page = () => {
          {contactDetail.map((contact,idx:number)=>{
             return (
 
-                <Link  key={idx} href={contact.link} target='_blank' className=" w-fit card flex items-center gap-3 bg-popover border-2 dark:border-[#1f1f1f] p-2 rounded-xl hover:scale-110 transition-all">
+                <motion.div key={idx} whileHover={{scale:1.1}}>
+                    <Link   href={contact.link} target='_blank' className=" w-fit card flex items-center gap-3 bg-popover border-2 dark:border-[#1f1f1f] p-2 rounded-xl ">
             <div className="left">{contact.icon}</div>
             <div className="right">
                 <p className='text-sm text-zinc-400'>{contact.icon_name}</p>
                 <p>{contact.contact_name}</p>
             </div>
         </Link>
+                </motion.div>
             )
         })}
        </div>
