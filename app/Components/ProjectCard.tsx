@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 
 const ProjectCard = (props:any) => {
   return (
-    <motion.div whileHover={{scale:1.1,rotate:3}} className=" bg-popover w-72 max-lg:w-full h-90 rounded-md overflow-hidden flex flex-col gap-3 border ">
+    <motion.div whileHover={{scale:1.1}} className=" bg-popover w-72 max-lg:w-full h-90 rounded-md overflow-hidden flex flex-col gap-3 border shrink-0">
         <div className="relative image w-full h-1/2 max-lg:h-96">
           <Image src={props.img} fill sizes='100' className='object-cover object-center' alt='k72'/>
         </div>

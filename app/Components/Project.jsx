@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from "react";
+import { useRef } from "react";
 import ProjectCard from "@/app/Components/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -31,6 +31,14 @@ const Project = (props) => {
       link:"https://linkhubn.netlify.app/",
       tech:["React.js","Tailwind"]
     },
+    {
+      img:"/images/project_image/img4.png",
+      title:"Image Downloader",
+      desc:"Download images quickly and easily from any website with a single click.",
+      github:"https://github.com/jitendra-biswas/image-downloader.git",
+      link:"https://image-downloader-nine.vercel.app/",
+      tech:["HTML","CSS","JavaScript"]
+    }
     
   ]
 
@@ -40,38 +48,35 @@ const Project = (props) => {
 
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(()=>{
-    gsap.from(headRef.current,{
-      opacity:0,
-      y:100,
-      delay:0.1,
+    gsap.to(projectRef.current,{
+      transform:"translateX(-200%)",
       scrollTrigger:{
         trigger:headRef.current,
         scroller:"body",
-        start:"top 80%"
-      }
-    })
-    gsap.from(projectRef.current,{
-      opacity:0,
-      y:100,
-      delay:0.1,
-      stagger:0.2,
-      scrollTrigger:{
-        trigger:headRef.current,
-        scroller:"body",
-        start:"top 80%"
+        start:"top 10%",
+        end:"top -10%",
+        pin:true,
+        scrub:2,
+        markers:true
       }
     })
   })
+
+
   return (
 
     <>
-    <h1 id="project" ref={headRef} className="heading w-fit text-3xl font-semibold">Featured Projects</h1>
-      <div ref={projectRef} className="w-full h-fit flex flex-wrap gap-3 mt-5 pb-20">
+      <div ref={headRef} className="overflow-x-hidden">
+    <h1 id="project"  className="heading w-fit text-3xl font-semibold">Featured Projects</h1>
+        <div ref={projectRef} className="w-full h-fit flex gap-5 mt-5 pb-20 ">
         {projectData.map((project,idx)=>{
           return (
+            
             <ProjectCard key={idx} img={project.img} title={project.title} desc={project.desc} github={project.github} link={project.link} tech={project.tech}/>
+            
           )
         })}
+      </div>
       </div>
     </>
   );
