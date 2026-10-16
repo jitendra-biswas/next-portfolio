@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { BsSend } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -17,13 +17,8 @@ const Home = () => {
   const btnRef = useRef("");
   const socialRef = useRef("");
   useGSAP(() => {
-    const tl = gsap.timeline();
-    gsap.from(leftRef.current, {
-      opacity: 0,
-      y: 100,
-      delay: 0.5,
-    });
-
+ 
+   
     gsap.from(rightRef.current, {
       opacity: 0,
       y: 100,
@@ -49,8 +44,11 @@ const Home = () => {
     <div className="w-full flex flex-col gap-7 pt-20 pb-32">
       <div className="info">
         <motion.div
+        initial={{opacity:0, y:40}}
           layoutId="profile"
           layout="position"
+          animate={{opacity:1, y:0}}
+          transition={{duration:0.5}}
           onClick={() => setActiveProfile(!ActiveProfile)}
           ref={leftRef}
           className="w-fit left relative group cursor-pointer"
