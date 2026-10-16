@@ -48,19 +48,42 @@ const Project = (props) => {
   const projectRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
-  useGSAP(() => {
-    gsap.to(projectRef.current, {
-      transform: "translateX(-200%)",
-      rotate: 5,
-      scrollTrigger: {
-        trigger: headRef.current,
-        scroller: "body",
-        start: "top 10%",
-        end: "top -10%",
-        pin: true,
-        scrub: 2,
-      },
+ useGSAP(() => {
+    const mm = gsap.matchMedia();
+
+    // Desktop
+    mm.add("(min-width: 768px)", () => {
+      gsap.to(projectRef.current, {
+        transform:"translateX(-200%)",
+        rotate: 5,
+        scrollTrigger: {
+          trigger: headRef.current,
+          scroller: "body",
+          start: "top 10%",
+          end: "top -10%",
+          pin: true,
+          scrub: 2,
+        },
+      });
     });
+
+    // Mobile
+    mm.add("(max-width: 767px)", () => {
+      gsap.to(projectRef.current, {
+         transform:"translateX(-400%)",
+        rotate: 5,
+        scrollTrigger: {
+          trigger: headRef.current,
+          scroller: "body",
+          start: "top 10%",
+          end: "top -80%",
+          pin: true,
+          scrub: 1,
+        },
+      });
+    });
+
+    return () => mm.revert();
   });
 
   return (
