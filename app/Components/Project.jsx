@@ -66,7 +66,7 @@ const Project = (props) => {
   return (
     <>
       <div id="project" className="scroll-smooth">
-        <div ref={headRef} className="overflow-x-hidden scrollbar-none mt-15">
+        <div ref={headRef} className="overflow-hidden mt-15">
           <h1 className="heading w-fit text-3xl font-semibold">
             Featured Projects
           </h1>
