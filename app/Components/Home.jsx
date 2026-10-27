@@ -12,7 +12,6 @@ import { AnimatePresence, motion } from "motion/react";
 import { CiMail } from "react-icons/ci";
 import { IoMdCall } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
-import { RxCross2 } from "react-icons/rx";
 const Home = () => {
   const [ActiveProfile, setActiveProfile] = useState(false);
   const leftRef = useRef("");
@@ -84,7 +83,7 @@ const Home = () => {
                 layoutId="profile"
                 layout="position"
                 onClick={(e) => e.stopPropagation()}
-                className="w-[32vw] max-md:w-full h-fit bg-zinc-800 rounded-xl border border-zinc-700 px-7 py-6 max-md:p-2 border-t-yellow-500"
+                className="w-[32vw] max-md:w-full h-fit bg-popover rounded-xl border border-chart-5 px-7 py-6 max-md:p-2 border-t-yellow-500"
               >
                 <div className="flex gap-5">
                   <motion.div className="relative max-md:hidden profile-picture w-32 h-32  rounded-full overflow-hidden bg-(--profile) shadow-2xl">
@@ -98,8 +97,8 @@ const Home = () => {
                   </motion.div>
                   
                   <div>
-                    <h1 className="text-3xl font-semibold text-zinc-300">Jitendra Biswas</h1>
-                    <h2 className="text-sm font-semibold text-gray-300">
+                    <h1 className="text-3xl font-semibold text-primary">Jitendra Biswas</h1>
+                    <h2 className="text-sm font-semibold text-primary">
                       Full Stack Web Developer
                     </h2>
                     <h3 className="text-xs font-semibold text-gray-400">
