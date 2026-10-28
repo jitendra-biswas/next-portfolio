@@ -10,7 +10,7 @@ import CustomCursor from "@/app/Components/CustomCursor";
 export const metadata: Metadata = {
   title: "Jitendra Biswas - Full Stack Web Developer",
   description: "I am Full Stack Developer enjoys building modern, responsive, and interactive web applications. I love turning ideas into clean, user-friendly digital experiences.",
-  icons:"/images/favicon.ico"
+  icons:"/images/favicon.png"
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

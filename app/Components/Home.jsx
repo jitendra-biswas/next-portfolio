@@ -54,9 +54,9 @@ const Home = () => {
           ref={leftRef}
           className="w-fit left relative group cursor-pointer"
         >
-          <div className="relative profile-picture w-32 h-32 rounded-full overflow-hidden bg-(--profile)">
+          <div className="relative profile-picture w-32 h-32  ">
             <Image
-              src="/images/profile.png"
+              src="/images/profileimg.png"
               alt="Profile"
               className="object-cover object-top scale-140 hover:scale-150 transition-all"
               fill
@@ -86,11 +86,11 @@ const Home = () => {
                 className="w-[32vw] max-md:w-full h-fit bg-popover rounded-xl border border-chart-5 px-7 py-6 max-md:p-2 border-t-yellow-500"
               >
                 <div className="flex gap-5">
-                  <motion.div className="relative max-md:hidden profile-picture w-32 h-32  rounded-full overflow-hidden bg-(--profile) shadow-2xl">
+                  <motion.div className="relative max-md:hidden profile-picture w-32 h-32  rounded-full overflow-hidden shadow-2xl">
                     <Image
-                      src="/images/profile.png"
+                      src="/images/profileimg.png"
                       alt=""
-                      className="object-cover object-top scale-150"
+                      className="object-cover object-top scale-100"
                       fill
                       sizes="140px"
                     />

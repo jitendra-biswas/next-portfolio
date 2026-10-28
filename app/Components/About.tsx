@@ -47,8 +47,8 @@ const About = () => {
       <h1 ref={headRef} className='heading text-3xl font-semibold'>About Me</h1>
      <div className='flex max-md:flex-col gap-3 mb-20'>
         <div ref={profileRef} className="left">
-            <div className=" relative profile-image w-42 h-42 bg-(--profile) rounded overflow-hidden">
-                <Image src="/images/profile.png" fill alt='profile image' className='object-cover object-top scale-130' loading='eager' sizes='200' />
+            <div className=" relative profile-image w-42 h-42  rounded overflow-hidden">
+                <Image src="/images/profileimg.png" fill alt='profile image' className='object-cover object-top scale-100' loading='eager' sizes='200' />
             </div>
         </div>
         <div ref={profileInfoRef} className="right">

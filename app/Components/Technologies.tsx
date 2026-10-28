@@ -94,7 +94,7 @@ const Technologies = () => {
   });
   return (
     <>
-      <div className="w-full h-fit pb-20 dark:text-zinc-200">
+      <div id="skill" className=" w-full h-fit pb-20 dark:text-zinc-200">
         <h1 ref={headRef} className="heading text-3xl font-semibold">
           Tools & Technologies
         </h1>
