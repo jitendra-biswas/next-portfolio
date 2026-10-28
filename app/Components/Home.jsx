@@ -65,11 +65,11 @@ const Home = () => {
           </div>
 
           <p
-            className="absolute w-42 top-0 left-26 border px-3 py-1 rounded-full text-sm
+            className="absolute w-32 top-0 left-26 border px-3 py-1 rounded-full text-sm
                 opacity-0 group-hover:opacity-100 transition-opacity duration-220
-                pointer-events-none"
+                pointer-events-none flex items-center justify-center ml-2"
           >
-            Click To View Profile
+            View Profile
           </p>
         </motion.div>
 

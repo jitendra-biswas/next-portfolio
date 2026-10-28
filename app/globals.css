@@ -6,6 +6,8 @@
 @custom-variant dark (&:is(.dark *));
 *{
     font-family: "Hanken Grotesk", sans-serif;
+    letter-spacing: 0.5;
+    word-spacing: 3;
     scroll-behavior: smooth;
 }
 
@@ -94,7 +96,7 @@
 :root {
     --profile-text:#555fee;
     --profile:#83bbff;
-    --background: #F3F4F6;
+    --background: rgb(230, 230, 239);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.145 0 0);
